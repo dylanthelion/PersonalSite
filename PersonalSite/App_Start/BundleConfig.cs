@@ -9,10 +9,15 @@ namespace PersonalSite
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+                        "~/Scripts/jquery.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
-                        "~/Scripts/jquery-ui-{version}.js"));
+                       "~/Scripts/agency.js",
+                        "~/Scripts/bootstrap.js",
+                        "~/Scripts/bootstrap.min.js",
+                        "~/Scripts/cbpAnimatedHeader.js",
+                        "~/Scripts/cbpAnimatedHeader.min.js",
+                        "~/Scripts/classie.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.unobtrusive*",
@@ -23,7 +28,12 @@ namespace PersonalSite
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css"));
+            bundles.Add(new StyleBundle("~/Content/css").Include(
+                        "~/Content/bootstrap.css",
+                        "~/Content/bootstrap.min.css",
+                        "~/Content/agency.css",
+                        "~/Content/font-awesome.css",
+                        "~/Content/font-awesome.min.css"));
 
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
                         "~/Content/themes/base/jquery.ui.core.css",

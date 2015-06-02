@@ -10,6 +10,13 @@ namespace PersonalSite.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.Header = "_homePartial";
+            return View();
+        }
+
+        public ActionResult About()
+        {
+            ViewBag.Header = "_secondaryHeader";
             return View();
         }
     }
