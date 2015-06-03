@@ -16,6 +16,7 @@ namespace PersonalSite.Controllers
 
         public ActionResult About()
         {
+            ViewBag.HeaderTitle = "About Me";
             ViewBag.Header = "_secondaryHeader";
             return View();
         }

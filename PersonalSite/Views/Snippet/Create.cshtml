@@ -1,0 +1,79 @@
+﻿@using PersonalSite.Models;
+@model PersonalSite.Models.Snippet
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm("Create", "Snippet", FormMethod.Post)) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend id="formHeader">Enter your code</legend>
+
+        <div class="formLabel">
+            @Html.LabelFor(m => m.Language, "Language")
+        </div>
+
+        <div class="formField">
+            @Html.DropDownListFor(m => m.Language, new SelectList(
+                    new List<SelectListItem>
+                    {
+                        new SelectListItem { Text = "Please Choose a language", Value = "Please Choose a Language" },
+                        new SelectListItem { Text = "C#", Value = ((int)Language.CSharp).ToString() },
+                        new SelectListItem { Text = "ObjC", Value = ((int)Language.ObjC).ToString() },
+                        new SelectListItem { Text = "Swift", Value = ((int)Language.Swift).ToString() }
+                    }, "Value", "Text"
+           ))
+
+            
+        </div>
+
+        <aside class="validationMessage">
+            @Html.ValidationMessageFor(m => m.Language)
+        </aside>
+
+        <div class="formLabel">
+            @Html.LabelFor(m => m.Title, "Title")
+        </div>
+
+        <div class="formField">
+            @Html.TextBoxFor(m => m.Title)
+        </div>
+
+        <aside class="validationMessage">
+            @Html.ValidationMessageFor(m => m.Title)
+        </aside>
+
+        <div class="formLabel">
+            @Html.LabelFor(m => m.Description, "Description")
+        </div>
+
+        <div class="formField">
+            @Html.TextAreaFor(m => m.Description, new { rows = "5", cols = "50" })
+        </div>
+
+        <aside class="validationMessage">
+            @Html.ValidationMessageFor(m => m.Description)
+        </aside>
+
+        <div class="formLabel">
+            @Html.LabelFor(m => m.Code, "Code")
+        </div>
+
+        <div class="formField">
+            @Html.TextAreaFor(m => m.Code, new { rows = "20", cols = "100", style = "overflow-y: scroll;" })
+        </div>
+
+        <aside class="validationMessage">
+            @Html.ValidationMessageFor(m => m.Code)
+        </aside>
+
+        <p>
+            <input type="submit" value="Create" id="codeSubmitButton" />
+        </p>
+    </fieldset>
+}

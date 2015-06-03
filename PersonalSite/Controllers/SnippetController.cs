@@ -1,6 +1,7 @@
 ﻿using PersonalSite.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -13,6 +14,8 @@ namespace PersonalSite.Controllers
 
         public ActionResult Index()
         {
+            ViewBag.Title = "Snippets";
+            ViewBag.Header = "_secondaryHeader";
             return View(db.AllSnippets.ToList());
         }
 
@@ -47,6 +50,7 @@ namespace PersonalSite.Controllers
 
         public ActionResult Create()
         {
+            ViewBag.HeaderTitle = "Create a Snippet";
             ViewBag.Title = "Post a Snippet";
             ViewBag.Header = "_secondaryHeader";
             return View();
@@ -54,9 +58,42 @@ namespace PersonalSite.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(string language, Snippet snippet)
         {
+            ViewBag.HeaderTitle = "Create a Snippet";
+            ViewBag.Title = "Post a Snippet";
+            ViewBag.Header = "_secondaryHeader";
+            if (!ModelState.IsValid)
+            {
+                return View(snippet);
+            }
+
+            db.AllSnippets.Add(snippet);
+            db.SaveChanges();
+
             return RedirectToAction("Index");
+        }
+
+        public ActionResult Edit(int id)
+        {
+            return View();
+        }
+
+        [HttpPatch]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(Snippet snippet)
+        {
+            if (!ModelState.IsValid)
+            {
+                return RedirectToAction("Edit", new { id = snippet.ID });
+            }
+
+            var oldSnippet = db.AllSnippets.Find(snippet.ID);
+            oldSnippet = snippet;
+            db.Entry(oldSnippet).State = EntityState.Modified;
+            db.SaveChanges();
+
+            return RedirectToAction("ViewSnippet", new { id = snippet.ID });
         }
 
     }
