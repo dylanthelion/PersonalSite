@@ -7,7 +7,7 @@
 }
 
 
-@using (Html.BeginForm("Edit", "Snippet", FormMethod.Post)) {
+@using (Html.BeginForm("Delete", "Snippet", FormMethod.Post)) {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
 
@@ -78,6 +78,10 @@
         <aside class="validationMessage">
             @Html.ValidationMessageFor(m => m.Code)
         </aside>
+
+        <div>
+            You must enter a password to delete a snippet: <input type="text" name="password" />
+        </div>
 
         <p>
             <input type="submit" value="Submit" id="codeSubmitButton" />

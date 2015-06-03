@@ -21,6 +21,9 @@ namespace PersonalSite.Controllers
 
         public ActionResult ViewSnippet(int id)
         {
+            ViewBag.HeaderTitle = "Snippet";
+            ViewBag.Title = "Snippet";
+            ViewBag.Header = "_secondaryHeader";
             return View(db.AllSnippets.Find(id));
         }
 
@@ -58,7 +61,7 @@ namespace PersonalSite.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(string language, Snippet snippet)
+        public ActionResult Create(Snippet snippet)
         {
             ViewBag.HeaderTitle = "Create a Snippet";
             ViewBag.Title = "Post a Snippet";
@@ -76,24 +79,142 @@ namespace PersonalSite.Controllers
 
         public ActionResult Edit(int id)
         {
-            return View();
+            ViewBag.HeaderTitle = "Edit your Snippet";
+            ViewBag.Title = "Edit Snippet";
+            ViewBag.Header = "_secondaryHeader";
+            Snippet snippet = db.AllSnippets.Find(id);
+
+            ViewBag.LanguageValue = (int)snippet.Language;
+
+            switch (snippet.Language)
+            {
+                case Language.CSharp:
+                    {
+                        ViewBag.Language = "C#";
+                        return View(snippet);
+                    }
+
+                case Language.ObjC:
+                    {
+                        ViewBag.Language = "Objective C";
+                        return View(snippet);
+                    }
+
+                case Language.Swift:
+                    {
+                        ViewBag.Language = "Swift";
+                        return View(snippet);
+                    }
+
+                default:
+                    {
+                        ViewBag.Language = "Error";
+                        return View(snippet);
+                    }
+            }
+
+            
         }
 
-        [HttpPatch]
+        [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Snippet snippet)
         {
+            ViewBag.HeaderTitle = "Edit your Snippet";
+            ViewBag.Title = "Edit Snippet";
+            ViewBag.Header = "_secondaryHeader";
             if (!ModelState.IsValid)
             {
-                return RedirectToAction("Edit", new { id = snippet.ID });
+                return View(snippet);
             }
 
-            var oldSnippet = db.AllSnippets.Find(snippet.ID);
-            oldSnippet = snippet;
-            db.Entry(oldSnippet).State = EntityState.Modified;
+            db.Entry(snippet).State = EntityState.Modified;
             db.SaveChanges();
 
             return RedirectToAction("ViewSnippet", new { id = snippet.ID });
+        }
+
+        public ActionResult Delete(int id)
+        {
+            ViewBag.HeaderTitle = "Edit your Snippet";
+            ViewBag.Title = "Edit Snippet";
+            ViewBag.Header = "_secondaryHeader";
+            Snippet snippet = db.AllSnippets.Find(id);
+
+            ViewBag.LanguageValue = (int)snippet.Language;
+
+            switch (snippet.Language)
+            {
+                case Language.CSharp:
+                    {
+                        ViewBag.Language = "C#";
+                        return View(snippet);
+                    }
+
+                case Language.ObjC:
+                    {
+                        ViewBag.Language = "Objective C";
+                        return View(snippet);
+                    }
+
+                case Language.Swift:
+                    {
+                        ViewBag.Language = "Swift";
+                        return View(snippet);
+                    }
+
+                default:
+                    {
+                        ViewBag.Language = "Error";
+                        return View(snippet);
+                    }
+            }
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Delete(Snippet snippet, string password)
+        {
+            ViewBag.HeaderTitle = "Edit your Snippet";
+            ViewBag.Title = "Edit Snippet";
+            ViewBag.Header = "_secondaryHeader";
+            if(snippet != null && password.Equals("DeleteMe"))
+            {
+                Snippet snippetToDelete = db.AllSnippets.Find(snippet.ID);
+                db.AllSnippets.Remove(snippetToDelete);
+                db.Entry(snippetToDelete).State = EntityState.Deleted;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            ViewBag.LanguageValue = (int)snippet.Language;
+
+            switch (snippet.Language)
+            {
+                case Language.CSharp:
+                    {
+                        ViewBag.Language = "C#";
+                        return View(snippet);
+                    }
+
+                case Language.ObjC:
+                    {
+                        ViewBag.Language = "Objective C";
+                        return View(snippet);
+                    }
+
+                case Language.Swift:
+                    {
+                        ViewBag.Language = "Swift";
+                        return View(snippet);
+                    }
+
+                default:
+                    {
+                        ViewBag.Language = "Error";
+                        return View(snippet);
+                    }
+            }
         }
 
     }

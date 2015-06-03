@@ -326,6 +326,7 @@
     <Content Include="Views\Snippet\ObjC.cshtml" />
     <Content Include="Views\Snippet\Swift.cshtml" />
     <Content Include="Views\Snippet\Edit.cshtml" />
+    <Content Include="Views\Snippet\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
