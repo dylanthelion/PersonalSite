@@ -20,6 +20,9 @@ namespace PersonalSite.Models
 
         [Required]
         public string Code { get; set; }
+
+        [Required]
+        public Language Language { get; set; }
     }
 
     public class SnippetContext : DbContext
@@ -32,4 +35,11 @@ namespace PersonalSite.Models
 
         public DbSet<Snippet> AllSnippets { get; set; }
     }
+
+    public enum Language
+    {
+        CSharp,
+        ObjC,
+        Swift
+    };
 }

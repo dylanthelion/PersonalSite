@@ -167,13 +167,17 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Controllers\SnippetController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201506021641262_Initial.cs" />
     <Compile Include="Migrations\201506021641262_Initial.Designer.cs">
       <DependentUpon>201506021641262_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201506031245465_Language.cs" />
+    <Compile Include="Migrations\201506031245465_Language.Designer.cs">
+      <DependentUpon>201506031245465_Language.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Snippet.cs" />
@@ -325,6 +329,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201506021641262_Initial.resx">
       <DependentUpon>201506021641262_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506031245465_Language.resx">
+      <DependentUpon>201506031245465_Language.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

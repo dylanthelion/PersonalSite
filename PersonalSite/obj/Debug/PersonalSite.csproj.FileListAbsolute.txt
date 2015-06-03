@@ -68,3 +68,4 @@ C:\Users\Administrator\Desktop\C\PersonalSite\PersonalSite\obj\Debug\PersonalSit
 C:\Users\Administrator\Desktop\C\PersonalSite\PersonalSite\obj\Debug\PersonalSite.pdb
 C:\Users\Administrator\Desktop\C\PersonalSite\PersonalSite\obj\Debug\PersonalSite.Migrations.Initial.resources
 C:\Users\Administrator\Desktop\C\PersonalSite\PersonalSite\obj\Debug\PersonalSite.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\C\PersonalSite\PersonalSite\obj\Debug\PersonalSite.Migrations.Language.resources
