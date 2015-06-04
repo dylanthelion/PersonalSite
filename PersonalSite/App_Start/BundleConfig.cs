@@ -40,7 +40,8 @@ namespace PersonalSite
                         "~/Content/bootstrap.min.css",
                         "~/Content/agency.css",
                         "~/Content/font-awesome.css",
-                        "~/Content/font-awesome.min.css"));
+                        "~/Content/font-awesome.min.css",
+                        "~/Content/snippets.css"));
 
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
                         "~/Content/themes/base/jquery.ui.core.css",

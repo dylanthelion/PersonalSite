@@ -4,9 +4,15 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Snippets</h2>
+<div class="snippetHeader">
+    <h2>Snippets</h2>
+</div>
 
-<button onclick="location.href='@Url.Action("Create", "Snippet")'; return false;">Create a snippet</button>
+<div class="linkButton">
+    <button  onclick="location.href='@Url.Action("Create", "Snippet")'; return false;">Create a snippet</button>
+</div>
+
+
 
 @foreach (var snippet in Model)
 {

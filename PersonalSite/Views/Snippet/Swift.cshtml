@@ -5,10 +5,15 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Swift Snippets</h2>
+<div class="snippetHeader">
+    <h2>Swift Snippets</h2>
+</div>
+
+<div class="linkButton">
+    <button onclick="location.href='@Url.Action("Create", "Snippet")'; return false;">Create a snippet</button>
+</div>
 
 
-<button onclick="location.href='@Url.Action("Create", "Snippet")'; return false;">Create a snippet</button>
 
 
 @foreach (var snippet in Model)

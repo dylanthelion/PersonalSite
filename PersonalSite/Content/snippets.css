@@ -1,0 +1,12 @@
+﻿body {
+}
+
+.snippetHeader > h2 {
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+.linkButton > button {
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
