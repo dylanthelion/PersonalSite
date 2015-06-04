@@ -3,38 +3,13 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<section id="team" class="bg-light-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Code Snippets</h2>
-                    <h3 class="section-subheading text-muted">Choose your language below</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="team-member">
-                        <img src="~/Images/swift.png" class="img-responsive img-circle" alt="">
-                        <h4>Swift</h4>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="team-member">
-                        <img src="~/Images/objectivec.png" class="img-responsive img-circle" alt="">
-                        <h4>Objective C</h4>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="team-member">
-                        <img src="~/Images/csharp.png" class="img-responsive img-circle" alt="">
-                        <h4>C# .NET</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<div id="aboutMe">
+    <p>Hi! My name is Dylan Belcher. I'm a .NET and iOS developer. I've built this site, to use as a repository for useful bits of code. Feel free to use anything here, and if you have your own snippets to offer, please post them here. I'll test them, and edit if need be. The one caveat: I'd liek to use this for short snippets, with discrete functionalities.</p>
+
+</div>
+
+<div id="contact">
+    <p>Email: dillion256@gmail.com</p>
+</div>
+
+@Html.Partial("_languageIcons")

@@ -343,6 +343,19 @@ header .intro-text2 .intro-heading2 {
 }
 
 /*
+    Styling for about me page    
+*/
+
+#aboutMe {
+    margin-left: 20px;
+    margin-right: 40px;
+}
+
+#contact {
+    margin-left: 20px;
+}
+
+/*
     Styling for code form entry
 */
 

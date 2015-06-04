@@ -17,15 +17,7 @@
 
     @Styles.Render("~/Content/css")
 
-    <!-- Bootstrap Core CSS -->
-    @*<link href="~/Content/bootstrap.css" rel="stylesheet">
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="~/Content/agency.css" rel="stylesheet">
-
     <!-- Custom Fonts -->
-    <link href="~/Content/font-awesome.min.css" rel="stylesheet" type="text/css">*@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -63,9 +55,6 @@
                         @Html.ActionLink("Home", "Index", "Home")
                     </li>
                     <li>
-                        <a class="page-scroll" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li>
                         @Html.ActionLink("About Me", "About", "Home")
                     </li>
                     <li>
@@ -96,7 +85,6 @@
         @Html.Partial((String)ViewBag.Header)
 
         <div id="body">
-            @RenderSection("featured", required: false)
             <section class="content-wrapper main-content clear-fix">
                 @RenderBody()
             </section>
@@ -110,22 +98,10 @@
                     <span class="copyright">Copyright &copy; Your Dylan the Lion</span>
                 </div>
                 <div class="col-md-4">
-                    <ul class="list-inline social-buttons">
-                        <li><a href="#"><i class="fa fa-twitter"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                        </li>
-                    </ul>
+                    
                 </div>
                 <div class="col-md-4">
-                    <ul class="list-inline quicklinks">
-                        <li><a href="#">Privacy Policy</a>
-                        </li>
-                        <li><a href="#">Terms of Use</a>
-                        </li>
-                    </ul>
+                    
                 </div>
             </div>
         </div>
@@ -137,22 +113,8 @@
         <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js?lang=css"></script>
     @Scripts.Render("~/bundles/jqueryui")
-    @*<script src="Scripts/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="Scripts/bootstrap.js"></script>
-    <script src="Scripts/bootstrap.min.js"></script>*@
 
     <!-- Plugin JavaScript -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    @*<script src="Scripts/classie.js"></script>
-    <script src="Scripts/cbpAnimatedHeader.js"></script>
-
-    <!-- Contact Form JavaScript -->
-    <script src="Scripts/jqBootstrapValidation.js"></script>
-    <script src="Scripts/contact_me.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="Scripts/agency.js"></script>*@
     </body>
 </html>
