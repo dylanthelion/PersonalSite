@@ -171,6 +171,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\GlobalVars.cs" />
     <Compile Include="Migrations\201506021641262_Initial.cs" />
     <Compile Include="Migrations\201506021641262_Initial.Designer.cs">
       <DependentUpon>201506021641262_Initial.cs</DependentUpon>
@@ -329,6 +330,7 @@
     <Content Include="Views\Snippet\Delete.cshtml" />
     <Content Include="Views\Snippet\ViewSnippet.cshtml" />
     <Content Include="Views\Shared\_languageIcons.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\SnippetLinks.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

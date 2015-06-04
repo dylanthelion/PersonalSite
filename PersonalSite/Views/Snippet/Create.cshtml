@@ -1,4 +1,5 @@
 ﻿@using PersonalSite.Models;
+@using PersonalSite.Helpers
 @model PersonalSite.Models.Snippet
 
 @{
@@ -19,15 +20,7 @@
         </div>
 
         <div class="formField">
-            @Html.DropDownListFor(m => m.Language, new SelectList(
-                    new List<SelectListItem>
-                    {
-                        new SelectListItem { Text = "Please Choose a language", Value = "Please Choose a Language" },
-                        new SelectListItem { Text = "C#", Value = ((int)Language.CSharp).ToString() },
-                        new SelectListItem { Text = "ObjC", Value = ((int)Language.ObjC).ToString() },
-                        new SelectListItem { Text = "Swift", Value = ((int)Language.Swift).ToString() }
-                    }, "Value", "Text"
-           ))
+            @Html.DropDownListFor(m => m.Language, GlobalVars.LanguageChoices)
 
             
         </div>

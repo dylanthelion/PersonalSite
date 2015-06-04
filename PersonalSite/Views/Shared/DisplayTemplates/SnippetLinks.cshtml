@@ -1,0 +1,9 @@
+﻿@model IEnumerable<PersonalSite.Models.Snippet>
+
+
+@foreach (var snippet in Model)
+{
+    <div class="snippetLink">
+        @Html.ActionLink(snippet.Title, "ViewSnippet", new { id = snippet.ID })
+    </div>
+}
