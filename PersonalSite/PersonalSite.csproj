@@ -244,6 +244,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\viewSnippet.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
@@ -321,12 +322,12 @@
     <Content Include="Views\Shared\_secondaryHeader.cshtml" />
     <Content Include="Views\Snippet\Create.cshtml" />
     <Content Include="Views\Snippet\Index.cshtml" />
-    <Content Include="Views\Snippet\ViewSnippet.cshtml" />
     <Content Include="Views\Snippet\CSharp.cshtml" />
     <Content Include="Views\Snippet\ObjC.cshtml" />
     <Content Include="Views\Snippet\Swift.cshtml" />
     <Content Include="Views\Snippet\Edit.cshtml" />
     <Content Include="Views\Snippet\Delete.cshtml" />
+    <Content Include="Views\Snippet\ViewSnippet.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

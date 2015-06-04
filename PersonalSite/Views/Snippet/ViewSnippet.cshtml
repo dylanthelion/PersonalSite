@@ -1,8 +1,97 @@
 ﻿@model PersonalSite.Models.Snippet
 
 @{
+    Layout = null;
     ViewBag.Title = "ViewSnippet";
-    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>ViewSnippet</h2>
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- .NET Bundle stuff -->
+
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Dylan the Lion @ViewBag.Title</title>
+
+    @Styles.Render("~/Content/viewSnippet/css")
+
+    <!-- Bootstrap Core CSS -->
+    @*<link href="~/Content/bootstrap.css" rel="stylesheet">
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="~/Content/agency.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" type="text/css">*@
+        <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    </head>
+
+    <body>
+
+        <div class="codeDescription">
+            @Model.Description
+        </div>
+
+        <pre class="prettyprint linenums">
+
+            @ViewBag.CodeText
+
+        </pre>
+
+        <div class="navButtons">
+
+            <button onclick="location.href='@Url.Action("Index", "Snippet")'; return false;">Back to Snippets</button>
+
+            <button onclick="location.href='@Url.Action("Edit", "Snippet", new { id = Model.ID })'; return false;">Edit</button>
+
+            <button onclick="location.href='@Url.Action("Delete", "Snippet", new { id = Model.ID })'; return false;">Delete</button>
+
+        </div>
+
+        @Scripts.Render("~/bundles/jquery")
+        <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js?lang=css"></script>
+    @Scripts.Render("~/bundles/viewSnippet/jquery")
+    @*<script src="Scripts/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>*@
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    @*<script src="Scripts/classie.js"></script>
+    <script src="Scripts/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="Scripts/jqBootstrapValidation.js"></script>
+    <script src="Scripts/contact_me.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="Scripts/agency.js"></script>*@
+
+    </body>
+
+    </html>

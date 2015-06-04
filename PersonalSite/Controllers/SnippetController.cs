@@ -22,9 +22,11 @@ namespace PersonalSite.Controllers
 
         public ActionResult ViewSnippet(int id)
         {
+            String codeText = db.AllSnippets.Find(id).Code;
             ViewBag.HeaderTitle = "Snippet";
             ViewBag.Title = "Snippet";
             ViewBag.Header = "_secondaryHeader";
+            ViewBag.CodeText = codeText.Replace("\n", "<br />");
             return View(db.AllSnippets.Find(id));
         }
 
