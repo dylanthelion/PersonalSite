@@ -14,6 +14,7 @@ namespace PersonalSite.Controllers
 
         public ActionResult Index()
         {
+            ViewBag.HeaderTitle = "Snippets";
             ViewBag.Title = "Snippets";
             ViewBag.Header = "_secondaryHeader";
             return View(db.AllSnippets.ToList());
@@ -29,6 +30,9 @@ namespace PersonalSite.Controllers
 
         public ActionResult CSharp()
         {
+            ViewBag.HeaderTitle = "C# Snippets";
+            ViewBag.Title = "Snippets";
+            ViewBag.Header = "_secondaryHeader";
             var CSharpSnippets = (from snippet in db.AllSnippets
                                   where snippet.Language == Language.CSharp
                                   select snippet).ToList();
@@ -37,6 +41,9 @@ namespace PersonalSite.Controllers
 
         public ActionResult ObjC()
         {
+            ViewBag.HeaderTitle = "Objective C Snippets";
+            ViewBag.Title = "Snippets";
+            ViewBag.Header = "_secondaryHeader";
             var ObjCSnippets = (from snippet in db.AllSnippets
                                 where snippet.Language == Language.ObjC
                                 select snippet).ToList();
@@ -45,6 +52,9 @@ namespace PersonalSite.Controllers
 
         public ActionResult Swift()
         {
+            ViewBag.HeaderTitle = "Swift";
+            ViewBag.Title = "Snippets";
+            ViewBag.Header = "_secondaryHeader";
             var SwiftSnippets = (from snippet in db.AllSnippets
                                  where snippet.Language == Language.Swift
                                  select snippet).ToList();

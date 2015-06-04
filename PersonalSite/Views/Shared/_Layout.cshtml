@@ -58,26 +58,35 @@
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-inner">
                     <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#services">Services</a>
+                        @Html.ActionLink("Home", "Index", "Home")
                     </li>
                     <li>
                         <a class="page-scroll" href="#portfolio">Portfolio</a>
                     </li>
                     <li>
-                        @Html.ActionLink("About Me", "About")
+                        @Html.ActionLink("About Me", "About", "Home")
                     </li>
                     <li>
                         @Html.ActionLink("Post Snippet", "Create", "Snippet")
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                        @Html.ActionLink("Snippets", "Index", "Snippet")
                     </li>
                 </ul>
+
+                <div class="dropdown pull-right myNavDropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="true" id="languageDropdown">Language
+                        <span class="caret"></span>
+                    </button>
+
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="languageDropdown">
+                        <li role="presentation">@Html.ActionLink("C#", "CSharp", "Snippet")</li>
+                        <li role="presentation">@Html.ActionLink("Objective C", "ObjC", "Snippet")</li>
+                        <li role="presentation">@Html.ActionLink("Swift", "Swift", "Snippet")</li>
+                    </ul>
+                </div>
             </div>
             <!-- /.navbar-collapse -->
         </div>

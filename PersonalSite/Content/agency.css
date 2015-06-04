@@ -204,7 +204,8 @@ fieldset[disabled] .btn-xl.active {
     background-color: #fed136;
 }
 
-.navbar-default .nav li a {
+.navbar-default .nav li a,
+.nav-dropdown .dropdown-menu {
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 400;
@@ -229,6 +230,24 @@ fieldset[disabled] .btn-xl.active {
     color: #fff;
     background-color: #fec503;
 }
+
+.myNavDropdown > button,
+.myNavDropdown > ul {
+    background: none;
+    border: none;
+    box-shadow: none;
+    color: white;
+}
+
+.myNavDropdown > ul li a {
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+
 
 @media (min-width:768px) {
     .navbar-default {
@@ -377,6 +396,22 @@ header .intro-text2 .intro-heading2 {
         font-weight: 700;
         line-height: 75px;
     }
+}
+
+/*
+    Code For Snippet Pages    
+*/
+
+.snippetLink {
+    margin-left: 20px;
+}
+
+.snippetLink > a {
+    color: blue;
+}
+
+.snippetLink > a:hover {
+        color: green;
 }
 
 section {

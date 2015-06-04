@@ -5,4 +5,11 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Swift</h2>
+<h2>Swift Snippets</h2>
+
+@foreach (var snippet in Model)
+{
+    <div class="snippetLink">
+        @Html.ActionLink(snippet.Title, "ViewSnippet", new { id = snippet.ID })
+    </div>
+}
