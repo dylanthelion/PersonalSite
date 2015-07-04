@@ -108,5 +108,15 @@ namespace PersonalSite.Areas.HelpPage
 
             return type.FullName;
         }
+
+        public virtual string GetDocumentation(HttpControllerDescriptor cd)
+        {
+            return "";
+        }
+
+        public virtual string GetResponseDocumentation(HttpActionDescriptor ad)
+        {
+            return "";
+        }
     }
 }
