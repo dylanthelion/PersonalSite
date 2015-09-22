@@ -71,6 +71,7 @@ namespace PersonalSite.Controllers
             return View();
         }
 
+        [ValidateInput(false)]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(Snippet snippet)

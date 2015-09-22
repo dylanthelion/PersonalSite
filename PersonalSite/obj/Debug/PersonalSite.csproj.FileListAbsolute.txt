@@ -66,12 +66,13 @@ C:\Users\Administrator\Desktop\C\PersonalSite\PersonalSite\bin\zh-Hant\System.Sp
 C:\Users\Administrator\Desktop\C\PersonalSite\PersonalSite\obj\Debug\PersonalSite.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Desktop\C\PersonalSite\PersonalSite\obj\Debug\PersonalSite.dll
 C:\Users\Administrator\Desktop\C\PersonalSite\PersonalSite\obj\Debug\PersonalSite.pdb
-C:\Users\Administrator\Desktop\C\PersonalSite\PersonalSite\obj\Debug\PersonalSite.Migrations.Initial.resources
-C:\Users\Administrator\Desktop\C\PersonalSite\PersonalSite\obj\Debug\PersonalSite.csproj.GenerateResource.Cache
-C:\Users\Administrator\Desktop\C\PersonalSite\PersonalSite\obj\Debug\PersonalSite.Migrations.Language.resources
 C:\Users\Administrator\Desktop\C\PersonalSite\PersonalSite\bin\System.Net.Http.Formatting.dll
 C:\Users\Administrator\Desktop\C\PersonalSite\PersonalSite\bin\System.Web.Http.dll
 C:\Users\Administrator\Desktop\C\PersonalSite\PersonalSite\bin\System.Web.Http.WebHost.dll
 C:\Users\Administrator\Desktop\C\PersonalSite\PersonalSite\bin\System.Net.Http.Formatting.xml
 C:\Users\Administrator\Desktop\C\PersonalSite\PersonalSite\bin\System.Web.Http.xml
 C:\Users\Administrator\Desktop\C\PersonalSite\PersonalSite\bin\System.Web.Http.WebHost.xml
+C:\Users\Administrator\Desktop\C\PersonalSite\PersonalSite\bin\MySql.Data.dll
+C:\Users\Administrator\Desktop\C\PersonalSite\PersonalSite\bin\mysql.data.entity.EF6.dll
+C:\Users\Administrator\Desktop\C\PersonalSite\PersonalSite\obj\Debug\PersonalSite.Migrations.Initial.resources
+C:\Users\Administrator\Desktop\C\PersonalSite\PersonalSite\obj\Debug\PersonalSite.csproj.GenerateResource.Cache

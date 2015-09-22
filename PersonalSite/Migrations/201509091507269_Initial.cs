@@ -12,9 +12,10 @@ namespace PersonalSite.Migrations
                 c => new
                     {
                         ID = c.Int(nullable: false, identity: true),
-                        Title = c.String(nullable: false),
-                        Description = c.String(nullable: false),
-                        Code = c.String(nullable: false),
+                        Title = c.String(nullable: false, unicode: false),
+                        Description = c.String(nullable: false, unicode: false),
+                        Code = c.String(nullable: false, unicode: false),
+                        Language = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.ID);
             
