@@ -141,6 +141,7 @@ namespace PersonalSite.Controllers
                 return View(snippet);
             }
 
+
             db.Entry(snippet).State = EntityState.Modified;
             db.SaveChanges();
 
@@ -229,6 +230,8 @@ namespace PersonalSite.Controllers
                     }
             }
         }
+
+        
 
     }
 }
